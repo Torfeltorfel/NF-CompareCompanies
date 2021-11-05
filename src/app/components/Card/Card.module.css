@@ -3,14 +3,16 @@
   box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
   max-width: 35rem;
   min-width: 25rem;
-  height: 10rem;
+  min-height: 10rem;
   border-radius: 8px;
 }
 
 .card__header {
   color: #ecb390;
+  padding: 1rem;
 }
 
 .card__description {
   color: #ecb390;
+  padding: 1rem;
 }
