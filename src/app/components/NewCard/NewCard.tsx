@@ -1,14 +1,20 @@
 import React, { useState } from 'react';
 import classes from './NewCard.module.css';
 
-function NewCard(): JSX.Element {
+type FormProps = {
+  onSubmit: (company: {
+    companyName: string;
+    companyDescription: string;
+  }) => void;
+};
+
+function NewCard({ onSubmit }: FormProps): JSX.Element {
   const [companyName, setCompanyName] = useState('');
   const [companyDescription, setCompanyDescription] = useState('');
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    console.log(companyName);
-    console.log(companyDescription);
+    onSubmit({ companyName, companyDescription });
   }
   return (
     <form action="submit" className={classes.container} onSubmit={handleSubmit}>

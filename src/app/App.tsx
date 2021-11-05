@@ -19,10 +19,20 @@ function App(): JSX.Element {
     },
   ]);
 
+  function handleSubmit(company: {
+    companyName: string;
+    companyDescription: string;
+  }) {
+    setCompanies([
+      { title: company.companyName, description: company.companyDescription },
+      ...companies,
+    ]);
+  }
+
   return (
     <>
       <Title></Title>
-      <NewCard></NewCard>
+      <NewCard onSubmit={handleSubmit}></NewCard>
       <main>
         {companies.map((company) => (
           <Card header={company.title} description={company.description}></Card>
