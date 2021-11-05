@@ -15,6 +15,8 @@ function NewCard({ onSubmit }: FormProps): JSX.Element {
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     onSubmit({ companyName, companyDescription });
+    setCompanyName('');
+    setCompanyDescription('');
   }
   return (
     <form action="submit" className={classes.container} onSubmit={handleSubmit}>
