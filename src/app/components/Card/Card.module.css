@@ -16,3 +16,8 @@
   color: #ecb390;
   padding: 1rem;
 }
+
+.card--applied {
+  background-color: red;
+  color: black;
+}
