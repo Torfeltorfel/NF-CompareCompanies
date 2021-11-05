@@ -1,0 +1,43 @@
+.container {
+  background-color: #d4e2d4;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  border-radius: 8px;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.input {
+  background-color: #fff;
+  height: 1.5rem;
+  margin-left: 3px;
+  padding: 0 5px;
+  width: 100%;
+  border: 1px solid #888;
+  border-radius: 8px;
+}
+
+.label {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.button {
+  display: inline-block;
+  width: 50%;
+  outline: 0;
+  appearance: none;
+  padding: 0 12px;
+  border: 0 solid transparent;
+  border-radius: 4px;
+  text-decoration: none;
+  background-color: rgb(9, 128, 76);
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  font-weight: 400;
+  height: 36px;
+}
