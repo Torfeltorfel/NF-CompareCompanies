@@ -1,33 +1,50 @@
 .container {
-  background-color: #d4e2d4;
+  background-color: var(--white);
   box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
   border-radius: 8px;
   padding: 1rem;
-  gap: 1rem;
+  gap: 2rem;
+}
+
+.newCardHeader {
+  color: var(--grey-800-text);
+  border-bottom: 1px solid #ecb390;
+  margin: auto;
 }
 
 .input {
-  background-color: #fff;
-  height: 1.5rem;
+  background-color: var(--grey-100-background-light);
+  color: var(--grey-900-text-dark);
+  height: 2.5rem;
   margin-left: 3px;
   padding: 0 5px;
   width: 100%;
-  border: 1px solid #888;
-  border-radius: 8px;
+  border-radius: 5px;
+  border: none;
+}
+
+.inputDescription {
+  background-color: var(--grey-100-background-light);
+  color: var(--grey-900-text-dark);
+  width: 100%;
+  border-radius: 5px;
+  border: none;
 }
 
 .label {
-  font-size: 0.6rem;
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 500;
+  font-size: 10px;
+  color: var(--grey-700-text-light);
 }
 
 .button {
   display: inline-block;
-  width: 50%;
+  width: 40%;
+  margin-left: auto;
   outline: 0;
   appearance: none;
   padding: 0 12px;
