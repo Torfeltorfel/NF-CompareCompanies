@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import classes from './Card.module.css';
-import Priority from '../Priority/Priority';
 
 type CardProps = {
   header: string;
   description: string;
+  priority: number;
 };
 
-function Card({ header, description }: CardProps): JSX.Element {
+function Card({ header, description, priority }: CardProps): JSX.Element {
   const [applied, setApplied] = useState(false);
-  const [number, setNumber] = useState([5]);
+
   function modifyApply() {
     setApplied(!applied);
   }
@@ -40,7 +40,7 @@ function Card({ header, description }: CardProps): JSX.Element {
       <label htmlFor="checkbox" className={classes.checkboxLabel}>
         Applied
       </label>
-      <Priority priority={number}></Priority>
+      <p onClick={modifyApply}>{priority}</p>
     </section>
   );
 }

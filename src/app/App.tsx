@@ -8,23 +8,26 @@ function App(): JSX.Element {
     {
       title: 'Neue Fische',
       description: 'puhhh, ich weiß nicht, was ich schreiben soll',
+      priority: 3,
     },
     {
       title: 'Alte Fische',
       description: 'das sind alte Fische',
-    },
-    {
-      title: 'Neue Fische',
-      description: 'puhhh, ich weiß nicht, was ich schreiben soll',
+      priority: 2,
     },
   ]);
 
   function handleSubmit(company: {
     companyName: string;
     companyDescription: string;
+    companyPriority: number;
   }) {
     setCompanies([
-      { title: company.companyName, description: company.companyDescription },
+      {
+        title: company.companyName,
+        description: company.companyDescription,
+        priority: company.companyPriority,
+      },
       ...companies,
     ]);
   }
@@ -35,7 +38,11 @@ function App(): JSX.Element {
       <NewCard onSubmit={handleSubmit}></NewCard>
       <main>
         {companies.map((company) => (
-          <Card header={company.title} description={company.description}></Card>
+          <Card
+            header={company.title}
+            description={company.description}
+            priority={company.priority}
+          ></Card>
         ))}
       </main>
     </>
