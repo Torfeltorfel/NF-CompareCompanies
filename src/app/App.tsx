@@ -37,11 +37,12 @@ function App(): JSX.Element {
       <Title></Title>
       <NewCard onSubmit={handleSubmit}></NewCard>
       <main>
-        {companies.map((company) => (
+        {companies.map((company, key) => (
           <Card
             header={company.title}
             description={company.description}
             priority={company.priority}
+            key={key}
           ></Card>
         ))}
       </main>

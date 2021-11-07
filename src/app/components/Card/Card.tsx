@@ -40,7 +40,8 @@ function Card({ header, description, priority }: CardProps): JSX.Element {
       <label htmlFor="checkbox" className={classes.checkboxLabel}>
         Applied
       </label>
-      <p onClick={modifyApply}>{priority}</p>
+      <input type="number" defaultValue={priority} />
+      <p>{priority}</p>
     </section>
   );
 }
