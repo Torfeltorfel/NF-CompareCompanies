@@ -15,15 +15,29 @@ function Card({ header, description }: CardProps): JSX.Element {
     <section
       className={`${classes.card} ${applied ? classes['card--applied'] : ''}`}
     >
-      <h2 className={classes.card__header}>{header}</h2>
-      <p className={classes.card__description}>{description}</p>
-      <label htmlFor="checkbox">Applied</label>
+      <h2
+        className={`${classes.card__header} ${
+          applied ? classes[`card__header--applied`] : ''
+        }`}
+      >
+        {header}
+      </h2>
+      <p
+        className={`${classes.card__description} ${
+          applied ? classes['card__description--applied'] : ''
+        }`}
+      >
+        {description}
+      </p>
       <input
         type="checkbox"
         id="checkbox"
         className={classes.checkbox}
         onClick={modifyApply}
       />
+      <label htmlFor="checkbox" className={classes.checkboxLabel}>
+        Applied
+      </label>
     </section>
   );
 }

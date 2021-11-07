@@ -10,9 +10,14 @@
 .card__header {
   color: var(--grey-800-text);
   background-color: #d4e2d4;
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 8px 8px 0 0;
   font-family: 'Caveat', cursive;
+}
+
+.card__header--applied {
+  color: var(--grey-700-text);
+  background-color: #e1e9e1;
 }
 
 .card__description {
@@ -20,7 +25,18 @@
   padding: 1rem;
 }
 
-.card--applied {
+.card--applied,
+.card__description--applied {
   background-color: var(--grey-100-background-light);
+  color: var(--grey-700-text-light);
+}
+
+.checkbox {
+  margin-left: 1rem;
+}
+
+.checkboxLabel {
+  font-size: 12px;
+  font-weight: 700;
   color: var(--grey-700-text-light);
 }
