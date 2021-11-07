@@ -1,14 +1,14 @@
 .title {
-  background-color: #df7861;
-  color: #fcf8e8;
+  background-color: #ecb390;
+  color: #df7861;
   box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
   text-align: center;
   max-width: 35rem;
   min-width: 25rem;
   padding: 1rem;
+  font-family: 'Caveat', cursive;
   font-weight: 700;
   font-size: 24px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-transform: lowercase;
+  text-transform: uppercase;
   border-radius: 8px;
 }

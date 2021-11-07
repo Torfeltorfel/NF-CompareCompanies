@@ -1,5 +1,5 @@
 .card {
-  background-color: #d4e2d4;
+  background-color: var(--white);
   box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
   max-width: 35rem;
   min-width: 25rem;
@@ -8,16 +8,19 @@
 }
 
 .card__header {
-  color: #ecb390;
+  color: var(--grey-800-text);
+  background-color: #d4e2d4;
   padding: 1rem;
+  border-radius: 8px 8px 0 0;
+  font-family: 'Caveat', cursive;
 }
 
 .card__description {
-  color: #ecb390;
+  color: var(--grey-800-text);
   padding: 1rem;
 }
 
 .card--applied {
-  background-color: red;
-  color: black;
+  background-color: var(--grey-100-background-light);
+  color: var(--grey-700-text-light);
 }

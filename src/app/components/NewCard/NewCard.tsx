@@ -15,13 +15,15 @@ function NewCard({ onSubmit }: FormProps): JSX.Element {
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     onSubmit({ companyName, companyDescription });
+    //setting placeholder default values back
     setCompanyName('');
     setCompanyDescription('');
   }
   return (
     <form action="submit" className={classes.container} onSubmit={handleSubmit}>
+      <h2 className={classes.newCardHeader}>Create new Company</h2>
       <label className={classes.label}>
-        Titel
+        Company Name
         <input
           type="text"
           className={classes.input}
@@ -32,9 +34,9 @@ function NewCard({ onSubmit }: FormProps): JSX.Element {
       </label>
       <label className={classes.label}>
         Description
-        <input
-          type="text"
-          className={classes.input}
+        <textarea
+          className={classes.inputDescription}
+          rows="4"
           placeholder="Description"
           value={companyDescription}
           onChange={(event) => setCompanyDescription(event.target.value)}

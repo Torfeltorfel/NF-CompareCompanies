@@ -1,7 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+:root {
+  --primary-900-text: rgb(49, 60, 145);
+  --primary-800-text-light: rgb(35, 103, 160);
+  --primary-700-dark: rgb(49, 129, 197);
+  --primary-500-light: rgb(98, 161, 214);
+  --primary-300-background: rgb(169, 211, 243);
+  --primary-100-background-light: rgb(239, 248, 255);
+  --grey-900-text-dark: rgb(33, 41, 52);
+  --grey-800-text: rgb(95, 107, 121);
+  --grey-700-text-light: rgb(139, 149, 166);
+  --grey-600: rgb(184, 196, 205);
+  --grey-500: rgb(207, 214, 222);
+  --grey-400: rgb(204, 212, 219);
+  --grey-300: rgb(213, 221, 229);
+  --grey-200-background-dark: rgb(225, 231, 236);
+  --grey-100-background-light: rgb(248, 249, 250);
+  --white: rgb(255, 255, 255);
+  --green-dark: rgb(10, 82, 58);
+  --green: rgb(29, 193, 117);
+  --green-light: rgb(226, 252, 236);
+  --yellow-dark: rgb(92, 73, 25);
+  --yellow: rgb(224, 203, 108);
+  --yellow-light: rgb(255, 252, 244);
+  --red-dark: rgb(99, 26, 26);
+  --red: rgb(224, 54, 54);
+  --red-light: rgb(253, 232, 232);
 }
 
 body {
@@ -11,7 +41,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #faf9f5;
+  background-color: var(--white);
   display: flex;
   justify-content: center;
 }
