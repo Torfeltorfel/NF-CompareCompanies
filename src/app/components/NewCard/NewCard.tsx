@@ -5,14 +5,14 @@ type FormProps = {
   onSubmit: (company: {
     companyName: string;
     companyDescription: string;
-    companyPriority: string;
+    companyPriority: number;
   }) => void;
 };
 
 function NewCard({ onSubmit }: FormProps): JSX.Element {
   const [companyName, setCompanyName] = useState('');
   const [companyDescription, setCompanyDescription] = useState('');
-  const [companyPriority, setCompanyPriority] = useState('');
+  const [companyPriority, setCompanyPriority] = useState<number>();
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -20,7 +20,7 @@ function NewCard({ onSubmit }: FormProps): JSX.Element {
     //setting placeholder default values back
     setCompanyName('');
     setCompanyDescription('');
-    setCompanyPriority('');
+    setCompanyPriority(0);
   }
   return (
     <form action="submit" className={classes.container} onSubmit={handleSubmit}>
@@ -51,7 +51,7 @@ function NewCard({ onSubmit }: FormProps): JSX.Element {
           type="number"
           className={classes.input}
           value={companyPriority}
-          onChange={(event) => setCompanyPriority(event.target.value)}
+          onChange={(event) => setCompanyPriority(event.target.valueAsNumber)}
         />
       </label>
       <input type="submit" value="Create Company" className={classes.button} />
