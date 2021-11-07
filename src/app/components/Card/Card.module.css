@@ -31,6 +31,17 @@
   color: var(--grey-700-text-light);
 }
 
+.card_bottomContainer {
+  display: flex;
+  align-items: center;
+}
+
+.card__checkboxContainer {
+  display: flex;
+  margin: 1rem;
+  align-items: center;
+}
+
 .checkbox {
   margin-left: 1rem;
 }
@@ -38,5 +49,23 @@
 .checkboxLabel {
   font-size: 12px;
   font-weight: 700;
+  color: var(--grey-700-text-light);
+}
+
+.card__priorityContainer {
+  display: flex;
+  align-items: center;
+}
+
+.card__priorityNumber {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--grey-700-text-light);
+}
+
+.card__priorityButtons {
+  margin: 0.1rem;
+  border: none;
+  background-color: white;
   color: var(--grey-700-text-light);
 }
