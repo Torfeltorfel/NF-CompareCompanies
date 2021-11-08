@@ -12,7 +12,7 @@ type FormProps = {
 function NewCard({ onSubmit }: FormProps): JSX.Element {
   const [companyName, setCompanyName] = useState('');
   const [companyDescription, setCompanyDescription] = useState('');
-  const [companyPriority, setCompanyPriority] = useState<number>();
+  const [companyPriority, setCompanyPriority] = useState<number>(0);
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -49,7 +49,7 @@ function NewCard({ onSubmit }: FormProps): JSX.Element {
         Priority
         <input
           type="number"
-          className={classes.input}
+          className={classes.inputPriority}
           value={companyPriority}
           onChange={(event) => setCompanyPriority(event.target.valueAsNumber)}
         />
