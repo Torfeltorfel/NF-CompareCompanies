@@ -49,7 +49,7 @@ function NewCard({ onSubmit }: FormProps): JSX.Element {
         Priority
         <input
           type="number"
-          className={classes.input}
+          className={classes.inputPriority}
           value={companyPriority}
           onChange={(event) => setCompanyPriority(event.target.valueAsNumber)}
         />
