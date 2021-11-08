@@ -9,6 +9,15 @@ type CardProps = {
 
 function Card({ header, description, priority }: CardProps): JSX.Element {
   const [applied, setApplied] = useState(false);
+  const [count, setCount] = useState(priority);
+
+  function decrementCount() {
+    setCount((prevCount) => prevCount - 1);
+  }
+
+  function incrementCount() {
+    setCount((prevCount) => prevCount + 1);
+  }
 
   function modifyApply() {
     setApplied(!applied);
@@ -45,9 +54,19 @@ function Card({ header, description, priority }: CardProps): JSX.Element {
         </div>
 
         <div className={classes.card__priorityContainer}>
-          <button className={classes.card__priorityButtons}>-</button>
-          <p className={classes.card__priorityNumber}>{priority}</p>
-          <button className={classes.card__priorityButtons}>+</button>
+          <button
+            onClick={decrementCount}
+            className={classes.card__priorityButtons}
+          >
+            -
+          </button>
+          <p className={classes.card__priorityNumber}>{count}</p>
+          <button
+            onClick={incrementCount}
+            className={classes.card__priorityButtons}
+          >
+            +
+          </button>
         </div>
       </div>
     </section>
