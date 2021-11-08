@@ -12,7 +12,8 @@ type FormProps = {
 function NewCard({ onSubmit }: FormProps): JSX.Element {
   const [companyName, setCompanyName] = useState('');
   const [companyDescription, setCompanyDescription] = useState('');
-  const [companyPriority, setCompanyPriority] = useState<number>();
+  const [companyPriority, setCompanyPriority] = useState<number>(0);
+  console.log(companyPriority, companyDescription);
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
